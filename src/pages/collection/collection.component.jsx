@@ -1,4 +1,4 @@
-import React from "react";
+import React, { /*useEffect*/ } from "react";
 import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item.component";
@@ -8,6 +8,15 @@ import { selectCollection } from "../../redux/shop/shop.selectors";
 import './collection.styles.scss';
 
 const CollectionPage = ({ collection }) => {
+    // useEffect(() => {
+    //     console.log('did mount');
+    //
+    //     // Cleanup function ~ ComponentWillUnmount
+    //     return () => {
+    //         console.log('did UNmount');
+    //     }
+    // }, []);
+
     const { title, items } = collection;
 
     return (
